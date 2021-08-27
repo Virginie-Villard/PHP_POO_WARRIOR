@@ -84,4 +84,9 @@ class Weapon {
     public $id;
     public $strength ;
     public $imageUrl;
+
+    public function __construct($id, $strength) {
+        $this->id = $id;
+        $this->strength = $strength;
+    }
 }
