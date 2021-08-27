@@ -32,6 +32,7 @@ abstract class Warrior extends LocalWarrior {
 // StartrekWarrior extends Warrior
 // glossaire : factoriser le code
 
+// 9/ Les constructeurs des sous classes de warrior doivent appeler le constructeur de Warrior et affecter $mentalPower = 8, $superPower = 100, $level = 1
 class StartrekWarrior extends Warrior {
     //5/ Les classe StartrekWarrior, MarvelWarrior et PokemonWarrior doivent avoir respectivement les attributs $mentalPower, $superPower et $level
     public $mentalPower;
@@ -41,7 +42,8 @@ class StartrekWarrior extends Warrior {
     }
 
     public function __construct($id) {
-       
+        parent::__construct($id);
+        $this->mentalPower = 8;
     }
 }
 
@@ -53,7 +55,8 @@ class MarvelWarrior extends Warrior {
     }
 
     public function __construct($id) {
-       
+        parent::__construct($id);
+        $this->superPower = 100;
     }
 }
 class PokemonWarrior extends Warrior {
@@ -65,7 +68,8 @@ class PokemonWarrior extends Warrior {
     }
 
     public function __construct($id) {
-       
+        parent::__construct($id);
+        $this->level  = 1;
     }
 }
 
