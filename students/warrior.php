@@ -25,6 +25,10 @@ abstract class Warrior extends LocalWarrior {
         $this->life = 100;
         $this->shield = 20;
     }
+    //11/ La classe Warrior doit avoir une méthode setWeapon() qui prend comme argument un Weapon. ATTENTION, c'est un setter
+    public function setWeapon(Weapon $weapon) {
+        $this->weapon = $weapon;
+    }
 };
 
 // 2/ Les classes StartrekWarrior, MarvelWarrior et PokemonWarrior doivent être créées dans le ficher students/warrior.php
@@ -36,15 +40,16 @@ abstract class Warrior extends LocalWarrior {
 class StartrekWarrior extends Warrior {
     //5/ Les classe StartrekWarrior, MarvelWarrior et PokemonWarrior doivent avoir respectivement les attributs $mentalPower, $superPower et $level
     public $mentalPower;
-
+    
     public function power() {
         return $this->mentalPower;
     }
-
+    
     public function __construct($id) {
         parent::__construct($id);
         $this->mentalPower = 8;
     }
+    
 }
 
 class MarvelWarrior extends Warrior {
