@@ -73,3 +73,8 @@ class PokemonWarrior extends Warrior {
     }
 }
 
+// 10/ Une classe Weapon doit être créée
+
+class Weapon {
+    
+}
