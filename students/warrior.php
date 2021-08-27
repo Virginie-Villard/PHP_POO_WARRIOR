@@ -29,7 +29,14 @@ abstract class Warrior extends LocalWarrior {
     public function setWeapon(Weapon $weapon) {
         $this->weapon = $weapon;
     }
+
+    // 14/ Warrior et Weapon doivent avoir une méthode setImageUrl($url) qui initialise l'attribut $imageUrl
+    public function setImageUrl($url){
+        $this->imageUrl = $url;
+    }
 };
+
+//____________________________________________________________________________________________________________________________________
 
 // 2/ Les classes StartrekWarrior, MarvelWarrior et PokemonWarrior doivent être créées dans le ficher students/warrior.php
 // extends
@@ -81,12 +88,19 @@ class PokemonWarrior extends Warrior {
 // 10/ Une classe Weapon doit être créée
 
 class Weapon {
+    // 12/ Weapon doit avoir les attributs (publics) $id, $strength et $imageUrl
     public $id;
     public $strength ;
     public $imageUrl;
 
+    // 13/ Weapon doit avoir un constructeur à 2 arguments $id et $strength qui initialise les attributs associés
     public function __construct($id, $strength) {
         $this->id = $id;
         $this->strength = $strength;
+    }
+
+    // 14/ Warrior et Weapon doivent avoir une méthode setImageUrl($url) qui initialise l'attribut $imageUrl
+    public function setImageUrl($url) {
+        $this->imageUrl = $url;
     }
 }
