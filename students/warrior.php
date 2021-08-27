@@ -17,7 +17,9 @@ abstract class Warrior extends LocalWarrior {
     public  $imageUrl;
     public  $weapon;
 
-    
+    public function __construct($id) {
+       
+    }
 };
 
 // 2/ Les classes StartrekWarrior, MarvelWarrior et PokemonWarrior doivent être créées dans le ficher students/warrior.php
@@ -28,22 +30,38 @@ abstract class Warrior extends LocalWarrior {
 class StartrekWarrior extends Warrior {
     //5/ Les classe StartrekWarrior, MarvelWarrior et PokemonWarrior doivent avoir respectivement les attributs $mentalPower, $superPower et $level
     public $mentalPower;
+
     public function power() {
         return $this->mentalPower;
+    }
+
+    // 7/ Les classes Warrior, StartrekWarrior, MarvelWarrior et PokemonWarrior doivent avoir des constructeurs
+    public function __construct($id) {
+       
     }
 }
 
 class MarvelWarrior extends Warrior {
     public $superPower;
+
     public function power() {
         return $this->superPower;
+    }
+
+    public function __construct($id) {
+       
     }
 }
 class PokemonWarrior extends Warrior {
     public $level;
+
     public function power() {
         return $this->level;
         ;
+    }
+
+    public function __construct($id) {
+       
     }
 }
 
