@@ -16,9 +16,14 @@ abstract class Warrior extends LocalWarrior {
     public  $shield;
     public  $imageUrl;
     public  $weapon;
-
+    
+    // 7/ Les classes Warrior, StartrekWarrior, MarvelWarrior et PokemonWarrior doivent avoir des constructeurs
+    // 8/ Le constructeur de Warrior doit prendre en paramètre un $id et initialiser l'id, speed=30, life=100, shield=20
     public function __construct($id) {
-       
+        $this->id = $id;
+        $this->speed = 30;
+        $this->life = 100;
+        $this->shield = 20;
     }
 };
 
@@ -35,7 +40,6 @@ class StartrekWarrior extends Warrior {
         return $this->mentalPower;
     }
 
-    // 7/ Les classes Warrior, StartrekWarrior, MarvelWarrior et PokemonWarrior doivent avoir des constructeurs
     public function __construct($id) {
        
     }
